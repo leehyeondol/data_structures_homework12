@@ -222,11 +222,11 @@ int bubbleSort(int *a)//버블 정렬 함수
 	{
 		for (j = 0; j < MAX_ARRAY_SIZE; j++)//j가 맥스 사이즈 까지
 		{
-			if (a[j] > a[j+1])//전값이 더 크면
+			if (a[j-1] > a[j])//전값이 더 크면
 			{
-				t = a[j];//전 값과 현재 값 교체
-				a[j] = a[j+1];
-				a[j+1] = t;
+				t = a[j-1];//전 값과 현재 값 교체
+				a[j-1] = a[j];
+				a[j] = t;
 			}
 		}
 	}
